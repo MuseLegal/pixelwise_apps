@@ -1,4 +1,7 @@
+ codex/convert-static-html-to-next.js-mdx-app-73bfih
 import Link from 'next/link';
+
+ main
 import type { FrameworkChapter } from '@/lib/content';
 import { Sidebar } from './sidebar';
 
@@ -12,6 +15,7 @@ export function DocLayout({
   children: React.ReactNode;
 }) {
   return (
+ codex/convert-static-html-to-next.js-mdx-app-73bfih
     <div className="framework-page">
       <div className="topbar">
         <div className="topbar-inner">
@@ -54,5 +58,11 @@ export function DocLayout({
         </aside>
       </div>
     </div>
+
+    <main className="docs-shell">
+      <Sidebar chapters={chapters} activeSlug={currentSlug} />
+      <article className="doc-content">{children}</article>
+    </main>
+ main
   );
 }

@@ -28,12 +28,21 @@ export default async function FrameworkChapterPage({
 
   return (
     <DocLayout chapters={chapters} currentSlug={slug}>
+codex/convert-static-html-to-next.js-mdx-app-73bfih
       <div className="page active">
         <h1 className="page-title">{chapter.frontmatter.title}</h1>
         <div className="divider" />
         <p className="page-intro">{chapter.frontmatter.description}</p>
         {content}
       </div>
+
+      <header className="doc-header">
+        <p className="eyebrow">Chapter</p>
+        <h1>{chapter.frontmatter.title}</h1>
+        <p>{chapter.frontmatter.description}</p>
+      </header>
+      {content}
+ main
     </DocLayout>
   );
 }
